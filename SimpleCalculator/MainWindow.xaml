@@ -1,0 +1,80 @@
+﻿<Window x:Class="SimpleCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleCalculator"
+        mc:Ignorable="d"
+        Title="Simple Calculator" Height="651.936" Width="510.737">
+    <Window.InputBindings>
+        <KeyBinding Command="{Binding NumberZero}" Key="NumPad0"></KeyBinding>
+        <KeyBinding Command="{Binding NumberOne}" Key="NumPad1"></KeyBinding>
+        <KeyBinding Command="{Binding NumberTwo}" Key="NumPad2"></KeyBinding>
+        <KeyBinding Command="{Binding NumberThree}" Key="NumPad3"></KeyBinding>
+        <KeyBinding Command="{Binding NumberFour}" Key="NumPad4"></KeyBinding>
+        <KeyBinding Command="{Binding NumberFive}" Key="NumPad5"></KeyBinding>
+        <KeyBinding Command="{Binding NumberSix}" Key="NumPad6"></KeyBinding>
+        <KeyBinding Command="{Binding NumberSeven}" Key="NumPad7"></KeyBinding>
+        <KeyBinding Command="{Binding NumberEight}" Key="NumPad8"></KeyBinding>
+        <KeyBinding Command="{Binding NumberNine}" Key="NumPad9"></KeyBinding>
+
+        <KeyBinding Command="{Binding Clear}" Key="Delete"></KeyBinding>
+        <KeyBinding Command="{Binding Decimal}" Key="Decimal"></KeyBinding>
+        <KeyBinding Command="{Binding Plus}" Key="Add"></KeyBinding>
+        <KeyBinding Command="{Binding Plus}" Key="OemPlus" Modifiers="Shift"></KeyBinding>
+        <KeyBinding Command="{Binding Equals}" Key="OemPlus"></KeyBinding>
+        <KeyBinding Command="{Binding Minus}" Key="OemMinus"></KeyBinding>
+        <KeyBinding Command="{Binding Minus}" Key="Subtract"></KeyBinding>
+        <KeyBinding Command="{Binding Divide}" Key="Divide"></KeyBinding>
+        <KeyBinding Command="{Binding Equals}" Key="Enter"></KeyBinding>
+        <KeyBinding Command="{Binding Multiply}" Key="Multiply"></KeyBinding>
+        <KeyBinding Command="{Binding Power}" Key="M"></KeyBinding>
+        <KeyBinding Command="{Binding Power}" Key="D5" Modifiers="Shift"></KeyBinding>
+        <KeyBinding Command="{Binding Backspace}" Key="Backspace"></KeyBinding>
+    </Window.InputBindings>
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="503" Margin="10,110,0,0" VerticalAlignment="Top" Width="484">
+            <Grid HorizontalAlignment="Left" Height="483" Margin="8.667,8.667,0,0" VerticalAlignment="Top" Width="464">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button Name="Equals" Click="Equals_Click" Content="=" Height="200" Width="80" Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="6.667,18.667,6,18.667" Grid.RowSpan="2" FontWeight="Bold" FontSize="20"/>
+                <Button Name="Plus" Click="Plus_Click" Content="+" Height="80" Width="80" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Button Name="Decimal" Click="Decimal_Click" Content="." Height="80" Width="80" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Button Name="NumberZero" Click="NumberZero_Click" Content="0" Height="80" Width="80" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Button Name="Clear" Click="Clear_Click" Content="Clear" Height="80" Width="80" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+
+                <Button Name="Minus" Click="Minus_Click" Content="-" Height="80" Width="80" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Button Name="NumberThree" Click="NumberThree_Click" Content="3" Height="80" Width="80" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Button Name="NumberTwo" Click="NumberFour_Click" Content="2" Height="80" Width="80" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Button Name="NumberOne" Click="NumberFive_Click" Content="1" Height="80" Width="80" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+
+                <Button Name="Divide" Click="Divide_Click"  Content="÷" Height="80" Width="80" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Button Name="Multiply" Click="Multiply_Click"  Content="×" Height="80" Width="80" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Button Name="NumberSix" Click="NumberSix_Click"  Content="6" Height="80" Width="80" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Button Name="NumberFive" Click="NumberFive_Click"  Content="5" Height="80" Width="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Button Name="NumberFour" Click="NumberFour_Click"  Content="4" Height="80" Width="80" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+
+                <Button Name="Backspace" Click="Backspace_Click"  Content="⟵" Height="80" Width="80" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Button Name="Modulus" Click="Modulus_Click"  Content="%" Height="80" Width="80" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Button Name="NumberNine" Click="NumberNine_Click"  Content="9" Height="80" Width="80" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Button Name="NumberEight" Click="NumberEight_Click"  Content="8" Height="80" Width="80" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                <Button Name="NumberSeven" Click="NumberSeven_Click"  Content="7" Height="80" Width="80" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+            </Grid>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="56" Margin="10,49,0,0" VerticalAlignment="Top" Width="484"/>
+        <TextBox IsReadOnly="True" Name="PrevExpression" HorizontalAlignment="Right" Height="34" Margin="0,10,209,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" TextAlignment="Left" VerticalContentAlignment="Center" FontSize="19" Padding="0,0,10,0" BorderThickness="0" Opacity="0.5"/>
+        <TextBox IsReadOnly="True" Name="Input" HorizontalAlignment="Left" Height="34" Margin="300,10,0,0" TextWrapping="Wrap" Text="Nothing put in yet" VerticalAlignment="Top" Width="194" TextAlignment="Right" VerticalContentAlignment="Center" FontSize="19" Padding="0,0,10,0" BorderThickness="0" Opacity="0.5"/>
+        <TextBox IsReadOnly="True" Name="Result" Height="38" Margin="19,58,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" TextAlignment="Right"  VerticalContentAlignment="Center" FontSize="30" Padding="0,0,10,0" BorderThickness="0" HorizontalAlignment="Left" Width="466" FontWeight="SemiBold"/>
+    </Grid>
+</Window>
